@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b2a22">
+  <meta name="description" content="Semijoias escolhidas com cuidado para unir qualidade, beleza e sofisticação. Descubra a coleção Bellavori e fale com a gente pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bellavori | Semijoias">
+  <meta property="og:description" content="Elegância que acompanha você. Descubra semijoias escolhidas com cuidado para todos os momentos.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1200&q=85">
+  <meta property="og:locale" content="pt_BR">
+  <title>Bellavori | Semijoias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --olive: #2b2a22;
+      --olive-soft: #34332a;
+      --gold: #e3c494;
+      --gold-deep: #c9a56b;
+      --cream: #f1e4d0;
+      --stone: #d8bfa6;
+      --terracotta: #a9795b;
+      --serif: "Gilda Display", Georgia, serif;
+      --sans: "Jost", Arial, sans-serif;
+      --header-height: 76px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 18px); }
+    body {
+      margin: 0;
+      background: var(--olive);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+    .shell { width: min(100% - 40px, 1160px); margin-inline: auto; }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--gold);
+      font-size: .68rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+    .section-heading {
+      margin: 0;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 8vw, 4.3rem);
+      font-weight: 400;
+      line-height: .98;
+    }
+    .section-intro { max-width: 510px; margin: 18px auto 0; color: rgba(241,228,208,.78); }
+    .center { text-align: center; }
+    .section { padding-block: 88px; }
+    .section--soft { background: var(--olive-soft); }
+    .gold-line { width: 52px; height: 1px; margin: 24px auto; background: var(--gold-deep); }
+
+    .site-header {
+      position: fixed;
+      z-index: 20;
+      inset: 0 0 auto;
+      height: var(--header-height);
+      border-bottom: 1px solid transparent;
+      transition: background .25s ease, border-color .25s ease, backdrop-filter .25s ease;
+    }
+    .site-header.is-scrolled {
+      border-color: rgba(227,196,148,.16);
+      background: rgba(43,42,34,.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .header-inner { display: flex; height: 100%; align-items: center; justify-content: space-between; }
+    .brand {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      font-weight: 500;
+      letter-spacing: .095em;
+      line-height: 1;
+    }
+    .header-contact {
+      min-height: 42px;
+      padding: 9px 15px;
+      border: 1px solid rgba(227,196,148,.65);
+      border-radius: 2px;
+      color: var(--gold);
+      font-size: .73rem;
+      letter-spacing: .07em;
+      transition: background .2s ease, color .2s ease;
+    }
+    .header-contact:hover { background: var(--gold); color: var(--olive); }
+
+    .hero {
+      position: relative;
+      display: flex;
+      min-height: min(830px, 100svh);
+      align-items: center;
+      overflow: hidden;
+      background: var(--olive) url("https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=2200&q=85") center 44% / cover no-repeat;
+    }
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(31,30,25,.91) 0%, rgba(37,35,29,.76) 49%, rgba(37,35,29,.35) 100%), linear-gradient(0deg, rgba(37,35,29,.45), transparent 40%);
+      content: "";
+    }
+    .hero-inner { position: relative; z-index: 1; padding-block: calc(var(--header-height) + 78px) 70px; }
+    .hero-copy { max-width: 720px; }
+    .hero h1 {
+      max-width: 700px;
+      margin: 0;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: clamp(3.65rem, 13vw, 7rem);
+      font-weight: 400;
+      letter-spacing: -.025em;
+      line-height: .88;
+    }
+    .hero-description { max-width: 560px; margin: 24px 0 0; color: rgba(241,228,208,.91); font-size: 1rem; }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 17px;
+      margin: 20px 0 0;
+      color: rgba(241,228,208,.77);
+      font-size: .68rem;
+      letter-spacing: .08em;
+    }
+    .hero-tags span + span::before { padding-right: 17px; color: var(--gold); content: "•"; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 23px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      font-size: .77rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-align: center;
+      text-transform: uppercase;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .button--gold { background: var(--gold); color: var(--olive); }
+    .button--gold:hover { border-color: var(--gold-deep); background: var(--gold-deep); }
+    .button--outline { background: rgba(43,42,34,.12); color: var(--gold); }
+    .button--outline:hover { background: rgba(227,196,148,.12); }
+    .hero-note { margin: 38px 0 0; color: rgba(241,228,208,.64); font-size: .68rem; letter-spacing: .17em; text-transform: uppercase; }
+
+    .differences { display: grid; gap: 34px; margin-top: 52px; }
+    .difference { padding: 0 12px; text-align: center; }
+    .line-icon { width: 38px; height: 38px; margin: 0 auto 17px; color: var(--gold); }
+    .difference h3, .step h3 { margin: 0; color: var(--gold); font-family: var(--serif); font-size: 1.85rem; font-weight: 400; }
+    .difference p { max-width: 260px; margin: 8px auto 0; color: rgba(241,228,208,.76); font-size: .92rem; }
+
+    .category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-top: 40px; }
+    .category-card {
+      position: relative;
+      display: flex;
+      min-height: 166px;
+      align-items: flex-end;
+      overflow: hidden;
+      border: 1px solid rgba(227,196,148,.32);
+      background: #4a4438;
+      text-align: left;
+    }
+    .category-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .75; transition: transform .45s ease; }
+    .category-card::after { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(32,30,24,.9), rgba(32,30,24,.04) 75%); content: ""; }
+    .category-card:hover img { transform: scale(1.05); }
+    .category-card span { position: relative; z-index: 1; padding: 15px; color: var(--cream); font-family: var(--serif); font-size: 1.55rem; }
+
+    .catalog-top { display: flex; flex-direction: column; align-items: center; }
+    .filter-list { display: flex; width: 100%; gap: 9px; margin: 30px 0 0; overflow-x: auto; padding: 3px 1px 9px; scrollbar-width: thin; scrollbar-color: var(--gold-deep) transparent; }
+    .filter-button {
+      flex: 0 0 auto;
+      min-height: 42px;
+      padding: 8px 15px;
+      border: 1px solid rgba(227,196,148,.4);
+      border-radius: 2px;
+      background: transparent;
+      color: var(--cream);
+      cursor: pointer;
+      font-size: .76rem;
+      letter-spacing: .04em;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .filter-button[aria-pressed="true"], .filter-button:hover { border-color: var(--gold); background: var(--gold); color: var(--olive); }
+    .product-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 13px; margin-top: 28px; }
+    .product-card { min-width: 0; }
+    .product-image-wrap { position: relative; overflow: hidden; aspect-ratio: 4 / 5; border: 1px solid rgba(227,196,148,.28); background: linear-gradient(145deg, #d8bfa6, #8f7963 58%, #34332a); }
+    .product-image-wrap::after { position: absolute; inset: 35% 0 0; background: linear-gradient(0deg, rgba(43,42,34,.24), transparent); content: ""; pointer-events: none; }
+    .product-image { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+    .product-card:hover .product-image { transform: scale(1.035); }
+    .product-category { margin: 15px 0 2px; color: var(--gold); font-size: .61rem; letter-spacing: .16em; text-transform: uppercase; }
+    .product-card h3 { margin: 0; color: var(--cream); font-family: var(--serif); font-size: 1.5rem; font-weight: 400; line-height: 1.14; }
+    .product-description { min-height: 44px; margin: 7px 0 0; color: rgba(241,228,208,.71); font-size: .8rem; line-height: 1.45; }
+    .product-price { margin: 10px 0 13px; color: var(--gold); font-size: .9rem; }
+    .buy-button { width: 100%; min-height: 46px; padding: 10px 12px; cursor: pointer; }
+    .empty-products { grid-column: 1 / -1; padding: 36px 10px; color: var(--cream); text-align: center; }
+
+    .steps { display: grid; gap: 32px; margin-top: 47px; }
+    .step { position: relative; padding: 0 12px; text-align: center; }
+    .step-number { display: grid; width: 46px; height: 46px; place-items: center; margin: 0 auto 15px; border: 1px solid var(--gold-deep); border-radius: 50%; color: var(--gold); font-family: var(--serif); font-size: 1.35rem; }
+    .step h3 { font-size: 1.7rem; }
+    .step p { max-width: 275px; margin: 8px auto 0; color: rgba(241,228,208,.76); font-size: .9rem; }
+    .shipping-note { max-width: 620px; margin: 38px auto 0; padding: 17px 20px; border: 1px solid rgba(227,196,148,.35); color: rgba(241,228,208,.85); font-size: .9rem; text-align: center; }
+    .about-copy { max-width: 720px; margin: 23px auto 0; color: rgba(241,228,208,.83); font-size: 1.05rem; line-height: 1.9; }
+
+    .final-cta { position: relative; overflow: hidden; padding-block: 79px; background: var(--olive-soft); text-align: center; }
+    .final-cta::before, .final-cta::after { position: absolute; width: 250px; height: 250px; border: 1px solid rgba(227,196,148,.13); border-radius: 50%; content: ""; }
+    .final-cta::before { top: -155px; left: -70px; }
+    .final-cta::after { right: -110px; bottom: -180px; width: 320px; height: 320px; }
+    .final-cta .shell { position: relative; z-index: 1; }
+    .final-cta .section-heading { max-width: 670px; margin-inline: auto; }
+
+    .site-footer { padding-block: 31px 24px; }
+    .footer-top { display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 24px; color: rgba(241,228,208,.8); font-size: .8rem; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { margin: 26px 0 0; padding-top: 17px; border-top: 1px solid rgba(227,196,148,.45); color: rgba(241,228,208,.64); font-size: .7rem; letter-spacing: .06em; text-align: center; }
+    .whatsapp-float {
+      position: fixed;
+      z-index: 19;
+      right: 17px;
+      bottom: max(17px, env(safe-area-inset-bottom));
+      display: grid;
+      width: 54px;
+      height: 54px;
+      place-items: center;
+      border: 1px solid var(--gold-deep);
+      border-radius: 50%;
+      background: var(--olive);
+      box-shadow: 0 5px 20px rgba(0,0,0,.3);
+      color: var(--gold);
+      transition: transform .2s ease, background .2s ease;
+    }
+    .whatsapp-float:hover { transform: translateY(-3px); background: var(--olive-soft); }
+    .whatsapp-float svg { width: 25px; height: 25px; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    @media (min-width: 700px) {
+      :root { --header-height: 84px; }
+      .shell { width: min(100% - 64px, 1160px); }
+      .section { padding-block: 112px; }
+      .hero { min-height: 760px; }
+      .hero-inner { padding-block: calc(var(--header-height) + 92px) 88px; }
+      .hero-description { font-size: 1.06rem; }
+      .differences { grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 62px; }
+      .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 50px; }
+      .category-card { min-height: 230px; }
+      .category-card span { padding: 20px; font-size: 1.8rem; }
+      .filter-list { width: auto; justify-content: center; flex-wrap: wrap; overflow: visible; }
+      .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 42px 22px; margin-top: 34px; }
+      .product-card h3 { font-size: 1.75rem; }
+      .product-description { min-height: 42px; font-size: .86rem; }
+      .steps { grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 58px; }
+      .step + .step::before { position: absolute; top: 22px; right: calc(50% + 49px); width: calc(100% - 98px); height: 1px; background: rgba(227,196,148,.33); content: ""; }
+      .final-cta { padding-block: 105px; }
+      .footer-top { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+    @media (min-width: 1000px) {
+      .hero { background-position: center 48%; }
+      .hero::before { background: linear-gradient(90deg, rgba(31,30,25,.92) 0%, rgba(37,35,29,.72) 46%, rgba(37,35,29,.18) 100%), linear-gradient(0deg, rgba(37,35,29,.34), transparent 45%); }
+      .product-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .category-card { min-height: 264px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#inicio" aria-label="Bellavori, início">Bellavori</a>
+      <a class="header-contact js-whatsapp" href="#" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Semijoias escolhidas com cuidado</p>
+          <h1 id="hero-title">Elegância que acompanha você.</h1>
+          <p class="hero-description">Nossas semijoias são escolhidas com cuidado para oferecer qualidade, beleza e sofisticação, unindo acabamento impecável e peças que valorizam seu estilo em todos os momentos.</p>
+          <div class="hero-tags" aria-label="Destaques da Bellavori">
+            <span>design atual</span><span>acabamento sofisticado</span><span>beleza para todos os momentos</span>
+          </div>
+          <div class="button-row">
+            <a class="button button--gold" href="#colecao">Ver coleção</a>
+            <a class="button button--outline js-whatsapp" href="#" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+          </div>
+          <p class="hero-note">Detalhes que contam a sua história</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="diferenciais-title">
+      <div class="shell">
+        <div class="center reveal">
+          <p class="eyebrow">Feitas para fazer parte de você</p>
+          <h2 class="section-heading" id="diferenciais-title">Beleza em cada detalhe</h2>
+        </div>
+        <div class="differences">
+          <article class="difference reveal">
+            <svg class="line-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4 23.7 15.2 35 19l-11.3 3.8L20 34l-3.7-11.2L5 19l11.3-3.8L20 4Z" stroke="currentColor" stroke-width="1.1"/><path d="m31 5 .9 2.8 2.8.9-2.8.9L31 12.5l-.9-2.9-2.8-.9 2.8-.9L31 5Z" stroke="currentColor" stroke-width="1"/></svg>
+            <h3>Design atual</h3><p>Peças que traduzem tendências com personalidade e elegância.</p>
+          </article>
+          <article class="difference reveal">
+            <svg class="line-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4.5 33 10v9.4c0 8.1-5.6 13.4-13 16.1C12.6 32.8 7 27.5 7 19.4V10l13-5.5Z" stroke="currentColor" stroke-width="1.1"/><path d="m14.5 20 3.7 3.7 7.5-8" stroke="currentColor" stroke-width="1.1"/></svg>
+            <h3>Acabamento sofisticado</h3><p>Cuidado em cada escolha, do primeiro olhar ao último detalhe.</p>
+          </article>
+          <article class="difference reveal">
+            <svg class="line-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 34s-13-7.9-13-17.1C7 9.1 15.8 6.1 20 13c4.2-6.9 13-3.9 13 3.9C33 26.1 20 34 20 34Z" stroke="currentColor" stroke-width="1.1"/><path d="m12 20 4 4 5-7 3 4h4" stroke="currentColor" stroke-width="1.1"/></svg>
+            <h3>Para todos os momentos</h3><p>Um toque especial para acompanhar você todos os dias.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="categorias-title">
+      <div class="shell">
+        <div class="center reveal">
+          <p class="eyebrow">Encontre o seu próximo favorito</p>
+          <h2 class="section-heading" id="categorias-title">Escolha por categoria</h2>
+          <p class="section-intro">Descubra os detalhes que combinam com o seu jeito de brilhar.</p>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="colecao" aria-labelledby="colecao-title">
+      <div class="shell">
+        <div class="catalog-top reveal">
+          <p class="eyebrow">Uma seleção especial</p>
+          <h2 class="section-heading center" id="colecao-title">Peças para descobrir</h2>
+          <p class="section-intro center">Encontre aquela que parece ter sido feita para você.</p>
+          <div class="filter-list" id="filter-list" role="group" aria-label="Filtrar produtos por categoria"></div>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="comprar-title">
+      <div class="shell">
+        <div class="center reveal">
+          <p class="eyebrow">Um jeito simples e pessoal</p>
+          <h2 class="section-heading" id="comprar-title">Como comprar</h2>
+        </div>
+        <div class="steps">
+          <article class="step reveal"><span class="step-number">01</span><h3>Escolha sua peça</h3><p>Explore a coleção e encontre os detalhes que combinam com você.</p></article>
+          <article class="step reveal"><span class="step-number">02</span><h3>Clique em comprar</h3><p>Vamos abrir uma conversa com os detalhes do produto escolhido.</p></article>
+          <article class="step reveal"><span class="step-number">03</span><h3>Finalize pelo WhatsApp</h3><p>Tire suas dúvidas e combine os próximos passos com a gente.</p></article>
+        </div>
+        <p class="shipping-note reveal">As peças podem ser enviadas ou, se preferir, podemos combinar uma retirada. Fale conosco para saber mais.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sobre-title">
+      <div class="shell center reveal">
+        <p class="eyebrow">Um pouco sobre nós</p>
+        <h2 class="section-heading" id="sobre-title">A essência Bellavori</h2>
+        <div class="gold-line" aria-hidden="true"></div>
+        <p class="about-copy">A Bellavori acredita que a beleza mora nos detalhes e que uma peça especial pode transformar a forma como você se sente. Cada semijoia é escolhida com carinho para acompanhar sua história, celebrar sua individualidade e estar presente nos momentos que fazem a vida brilhar.</p>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-title">
+      <div class="shell reveal">
+        <p class="eyebrow">Seu próximo detalhe favorito está aqui</p>
+        <h2 class="section-heading" id="final-title">Encontre a peça que combina com você</h2>
+        <p class="section-intro">Estamos por aqui para ajudar você a escolher.</p>
+        <a class="button button--gold js-whatsapp" href="#" target="_blank" rel="noopener noreferrer" style="margin-top:27px">Conversar pelo WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-top">
+        <a class="brand" href="#inicio">Bellavori</a>
+        <nav class="footer-links" aria-label="Links do rodapé">
+          <a href="https://www.instagram.com/bellavori/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="js-whatsapp" href="#" target="_blank" rel="noopener noreferrer">Fale pelo WhatsApp</a>
+          <a href="#colecao">Ver coleção</a>
+        </nav>
+      </div>
+      <p class="footer-bottom">© <span id="current-year"></span> Bellavori. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float js-whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Fale com a Bellavori pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4A8 8 0 1 1 20 11.7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8.5c.2-.4.4-.4.7-.4h.4c.2 0 .3.1.4.4l.7 1.7c.1.2 0 .4-.1.5l-.5.6c-.2.2-.2.3-.1.5.5.9 1.2 1.6 2.1 2.1.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.5-.1l1.6.8c.3.1.4.2.4.4 0 .3-.2 1.1-.7 1.5-.5.4-1.1.6-1.8.4-1-.2-2.3-.8-3.5-1.9-1.4-1.2-2.3-2.8-2.5-3.8-.2-.8 0-1.4.4-1.9.3-.4.7-.6.9-.6Z" fill="currentColor"/></svg>
+  </a>
+
+  <script>
+    // Troque pelo número completo com DDI e DDD, somente números (ex.: 5511999999999).
+    const WHATSAPP_NUMBER = "55XXXXXXXXXXX";
+
+    // Edite nomes, descrições, preços e fotos dos produtos neste array.
+    // As imagens usam URLs do Unsplash com parâmetros para carregamento otimizado; substitua por fotos reais quando quiser.
+    const PRODUCTS = [
+      { name: "Colar Aurora", category: "Colares", description: "Corrente delicada com brilho na medida certa.", price: "R$ 129,90", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=78" },
+      { name: "Colar Serena", category: "Colares", description: "Um toque elegante para acompanhar seus dias.", price: "R$ 149,90", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=78" },
+      { name: "Colar Lume", category: "Colares", description: "Design delicado com acabamento luminoso.", price: "R$ 139,90", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=78" },
+      { name: "Colar Dourado", category: "Colares", description: "Uma peça versátil para criar combinações.", price: "R$ 119,90", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=78" },
+      { name: "Brinco Celeste", category: "Brincos", description: "Leveza e brilho para iluminar o seu olhar.", price: "R$ 89,90", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=78" },
+      { name: "Brinco Solenne", category: "Brincos", description: "Elegância delicada com presença marcante.", price: "R$ 109,90", image: "https://images.unsplash.com/photo-1635767798638-3665a6c4b6a5?auto=format&fit=crop&w=700&q=78" },
+      { name: "Brinco Alba", category: "Brincos", description: "Um clássico repensado para todos os momentos.", price: "R$ 79,90", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=78" },
+      { name: "Brinco Amélie", category: "Brincos", description: "Detalhes luminosos em uma silhueta atemporal.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1635767798638-3665a6c4b6a5?auto=format&fit=crop&w=700&q=78" },
+      { name: "Anel Serena", category: "Anéis", description: "Um detalhe sutil para expressar seu estilo.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
+      { name: "Anel Lumière", category: "Anéis", description: "Brilho delicado com personalidade própria.", price: "R$ 119,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
+      { name: "Anel Vittoria", category: "Anéis", description: "Uma peça elegante para usar do seu jeito.", price: "R$ 129,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
+      { name: "Anel Fiore", category: "Anéis", description: "Linhas delicadas inspiradas na beleza natural.", price: "R$ 89,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
+      { name: "Pulseira Duna", category: "Pulseiras", description: "Um acabamento especial para seus movimentos.", price: "R$ 119,90", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=78" },
+      { name: "Pulseira Alma", category: "Pulseiras", description: "Delicadeza que combina com as suas escolhas.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=78" },
+      { name: "Pulseira Brisa", category: "Pulseiras", description: "Leve e versátil, para acompanhar você sempre.", price: "R$ 109,90", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=78" },
+      { name: "Pulseira Estela", category: "Pulseiras", description: "Um brilho discreto para todos os dias.", price: "R$ 129,90", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=78" },
+      { name: "Piercing Serena", category: "Piercings de orelha", description: "Um detalhe delicado para compor sua curadoria.", price: "R$ 69,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
+      { name: "Piercing Lumi", category: "Piercings de orelha", description: "Brilho sutil para uma composição única.", price: "R$ 79,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
+      { name: "Piercing Alba", category: "Piercings de orelha", description: "Design minimalista com acabamento sofisticado.", price: "R$ 64,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
+      { name: "Piercing Sol", category: "Piercings de orelha", description: "Um ponto de luz para realçar seu estilo.", price: "R$ 74,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
+      { name: "Acessório Belle", category: "Acessórios", description: "Um pequeno detalhe que faz toda a diferença.", price: "R$ 89,90", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=78" },
+      { name: "Acessório Miel", category: "Acessórios", description: "Elegância versátil para combinar como quiser.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=78" },
+      { name: "Acessório Céleste", category: "Acessórios", description: "Um toque luminoso para acompanhar você.", price: "R$ 79,90", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=78" },
+      { name: "Acessório Étoile", category: "Acessórios", description: "Um detalhe atemporal com brilho delicado.", price: "R$ 109,90", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=78" }
+    ];
+
+    // Troque os textos e imagens das categorias de acordo com a coleção.
+    const CATEGORIES = [
+      { name: "Colares", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=760&q=78" },
+      { name: "Brincos", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=760&q=78" },
+      { name: "Anéis", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=760&q=78" },
+      { name: "Pulseiras", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=760&q=78" },
+      { name: "Piercings de orelha", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=760&q=78" },
+      { name: "Acessórios", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=760&q=78" }
+    ];
+
+    const productGrid = document.querySelector("#product-grid");
+    const filterList = document.querySelector("#filter-list");
+    const categoryGrid = document.querySelector("#category-grid");
+    let activeCategory = "Todos";
+
+    function whatsappLink(message) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    }
+
+    function renderCategories() {
+      categoryGrid.innerHTML = CATEGORIES.map(({ name, image }) => `
+        <a class="category-card reveal" href="#colecao" data-category-link="${name}">
+          <img src="${image}" alt="Semijoias Bellavori: categoria ${name}" loading="lazy" decoding="async" width="760" height="520">
+          <span>${name}</span>
+        </a>
+      `).join("");
+    }
+
+    function renderFilters() {
+      const names = ["Todos", ...CATEGORIES.map(({ name }) => name)];
+      filterList.innerHTML = names.map((name) => `
+        <button class="filter-button" type="button" data-filter="${name}" aria-pressed="${name === activeCategory}">${name}</button>
+      `).join("");
+    }
+
+    function renderProducts() {
+      const visibleProducts = activeCategory === "Todos"
+        ? PRODUCTS
+        : PRODUCTS.filter(({ category }) => category === activeCategory);
+
+      if (visibleProducts.length === 0) {
+        productGrid.innerHTML = '<p class="empty-products">Em breve, novas peças nesta categoria. Fale com a gente para saber mais.</p>';
+        return;
+      }
+
+      productGrid.innerHTML = visibleProducts.map((product) => `
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image" src="${product.image}" alt="${product.name} — ${product.description}" loading="lazy" decoding="async" width="700" height="875">
+          </div>
+          <p class="product-category">${product.category}</p>
+          <h3>${product.name}</h3>
+          <p class="product-description">${product.description}</p>
+          ${product.price ? `<p class="product-price">${product.price}</p>` : ""}
+          <a class="button button--outline buy-button" href="${whatsappLink(`Olá! Vi o produto ${product.name} no site da Bellavori e gostaria de comprar.`)}" target="_blank" rel="noopener noreferrer" aria-label="Comprar ${product.name} pelo WhatsApp">Comprar</a>
+        </article>
+      `).join("");
+    }
+
+    function updateCategory(category) {
+      activeCategory = category;
+      renderFilters();
+      renderProducts();
+    }
+
+    renderCategories();
+    renderFilters();
+    renderProducts();
+    document.querySelectorAll(".js-whatsapp").forEach((link) => {
+      link.href = whatsappLink("Olá! Vim pelo site da Bellavori e gostaria de conhecer as semijoias.");
+    });
+    document.querySelector("#current-year").textContent = new Date().getFullYear();
+
+    categoryGrid.addEventListener("click", (event) => {
+      const link = event.target.closest("[data-category-link]");
+      if (!link) return;
+      updateCategory(link.dataset.categoryLink);
+    });
+    filterList.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-filter]");
+      if (button) updateCategory(button.dataset.filter);
+    });
+
+    const header = document.querySelector("#site-header");
+    const updateHeader = () => header.classList.toggle("is-scrolled", window.scrollY > 12);
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+    } else {
+      document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
