@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#2b2a22">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Semijoias escolhidas com cuidado para unir qualidade, beleza e sofisticação. Descubra a coleção Bellavori e fale com a gente pelo WhatsApp.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bellavori | Semijoias">
@@ -17,64 +17,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="announcement-bar">
+    <div class="shell announcement-inner">
+      <span>SEMIJOIAS ESCOLHIDAS COM CUIDADO</span>
+      <a href="#colecao">COMPRAR <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
   <header class="site-header" id="site-header">
-    <div class="shell header-inner">
+    <div class="shell header-main">
+      <span class="cep-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Informar meu CEP
+      </span>
       <a class="brand" href="#inicio" aria-label="Bellavori, início">Bellavori</a>
-      <a class="header-contact js-whatsapp" href="#" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+      <form class="header-search" id="search-form" role="search">
+        <label class="sr-only" for="product-search">Buscar produtos</label>
+        <input id="product-search" type="search" placeholder="O que está buscando hoje?" autocomplete="off">
+        <button class="icon-button" type="submit" aria-label="Buscar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+        </button>
+      </form>
+      <div class="header-actions">
+        <button class="icon-button favorite-link" id="favorite-toggle" type="button" aria-label="Ver favoritos" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11a4.8 4.8 0 0 1 8.8-2.6 4.8 4.8 0 0 1 8.8 2.6Z"/></svg>
+        </button>
+        <a class="icon-button js-whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L4 20l.9-3.8a8.5 8.5 0 1 1 15.6-4.6Z"/><path d="M9 8.5c.3-.7 1-.7 1.3-.1l.8 1.4c.2.4.1.7-.2 1l-.5.5c.7 1.2 1.4 1.9 2.6 2.6l.5-.5c.3-.3.6-.4 1-.2l1.4.8c.6.3.6 1 .1 1.3-.8.5-1.8.6-2.7.3-2.5-.8-4.6-2.9-5.4-5.4-.3-.9-.2-1.9.3-2.7Z"/></svg>
+        </a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="inicio" aria-labelledby="hero-title">
-      <div class="shell hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Semijoias escolhidas com cuidado</p>
-          <h1 id="hero-title">Elegância que acompanha você.</h1>
-          <p class="hero-description">Nossas semijoias são escolhidas com cuidado para oferecer qualidade, beleza e sofisticação, unindo acabamento impecável e peças que valorizam seu estilo em todos os momentos.</p>
-          <div class="hero-tags" aria-label="Destaques da Bellavori">
-            <span>design atual</span><span>acabamento sofisticado</span><span>beleza para todos os momentos</span>
-          </div>
-          <div class="button-row">
-            <a class="button button--gold" href="#colecao">Ver coleção</a>
-            <a class="button button--outline js-whatsapp" href="#" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
-          </div>
-          <p class="hero-note">Detalhes que contam a sua história</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="diferenciais-title">
-      <div class="shell">
-        <div class="center reveal">
-          <p class="eyebrow">Feitas para fazer parte de você</p>
-          <h2 class="section-heading" id="diferenciais-title">Beleza em cada detalhe</h2>
-        </div>
-        <div class="differences">
-          <article class="difference reveal">
-            <svg class="line-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4 23.7 15.2 35 19l-11.3 3.8L20 34l-3.7-11.2L5 19l11.3-3.8L20 4Z" stroke="currentColor" stroke-width="1.1"/><path d="m31 5 .9 2.8 2.8.9-2.8.9L31 12.5l-.9-2.9-2.8-.9 2.8-.9L31 5Z" stroke="currentColor" stroke-width="1"/></svg>
-            <h3>Design atual</h3><p>Peças que traduzem tendências com personalidade e elegância.</p>
-          </article>
-          <article class="difference reveal">
-            <svg class="line-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4.5 33 10v9.4c0 8.1-5.6 13.4-13 16.1C12.6 32.8 7 27.5 7 19.4V10l13-5.5Z" stroke="currentColor" stroke-width="1.1"/><path d="m14.5 20 3.7 3.7 7.5-8" stroke="currentColor" stroke-width="1.1"/></svg>
-            <h3>Acabamento sofisticado</h3><p>Cuidado em cada escolha, do primeiro olhar ao último detalhe.</p>
-          </article>
-          <article class="difference reveal">
-            <svg class="line-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 34s-13-7.9-13-17.1C7 9.1 15.8 6.1 20 13c4.2-6.9 13-3.9 13 3.9C33 26.1 20 34 20 34Z" stroke="currentColor" stroke-width="1.1"/><path d="m12 20 4 4 5-7 3 4h4" stroke="currentColor" stroke-width="1.1"/></svg>
-            <h3>Para todos os momentos</h3><p>Um toque especial para acompanhar você todos os dias.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--soft" aria-labelledby="categorias-title">
-      <div class="shell">
-        <div class="center reveal">
-          <p class="eyebrow">Encontre o seu próximo favorito</p>
-          <h2 class="section-heading" id="categorias-title">Escolha por categoria</h2>
-          <p class="section-intro">Descubra os detalhes que combinam com o seu jeito de brilhar.</p>
-        </div>
-        <div class="category-grid" id="category-grid"></div>
-      </div>
+    <section class="hero" id="inicio" aria-label="Banner da coleção">
     </section>
 
     <section class="section" id="colecao" aria-labelledby="colecao-title">
@@ -83,33 +58,54 @@
           <p class="eyebrow">Uma seleção especial</p>
           <h2 class="section-heading center" id="colecao-title">Peças para descobrir</h2>
           <p class="section-intro center">Encontre aquela que parece ter sido feita para você.</p>
-          <div class="filter-list" id="filter-list" role="group" aria-label="Filtrar produtos por categoria"></div>
+          <div class="catalog-toolbar">
+            <div class="toolbar-start">
+              <button class="pill-button" id="open-filters" type="button" aria-expanded="false" aria-controls="filter-drawer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10m-7 6h4"/><circle cx="8" cy="6" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="12" cy="18" r="1.5"/></svg>
+                Filtros
+              </button>
+              <p class="result-count" id="result-count" aria-live="polite"></p>
+            </div>
+            <label class="sort-control">
+              <span>Ordenar por:</span>
+              <select id="sort-products" aria-label="Ordenar produtos">
+                <option value="launch">Lançamentos</option>
+                <option value="price-asc">Menor preço</option>
+                <option value="price-desc">Maior preço</option>
+              </select>
+            </label>
+          </div>
+          <div class="filter-backdrop" id="filter-backdrop" hidden></div>
+          <aside class="filter-drawer" id="filter-drawer" aria-hidden="true" aria-labelledby="filter-title">
+            <div class="drawer-heading">
+              <h3 id="filter-title">Filtros</h3>
+              <button class="icon-button" id="close-filters" type="button" aria-label="Fechar filtros">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+              </button>
+            </div>
+            <h4>Categoria</h4>
+            <div class="filter-list" id="filter-list" role="group" aria-label="Filtrar produtos por categoria"></div>
+            <label class="drawer-field">Faixa de preço
+              <span class="price-range">
+                <span><span>De R$</span><input id="min-price" type="number" min="0" placeholder="0" inputmode="decimal" aria-label="Preço mínimo"></span>
+                <span><span>Até R$</span><input id="max-price" type="number" min="0" placeholder="Sem limite" inputmode="decimal" aria-label="Preço máximo"></span>
+              </span>
+            </label>
+            <label class="drawer-field">Material / banho
+              <select disabled aria-describedby="filter-data-note"><option>Sem dados cadastrados</option></select>
+            </label>
+            <label class="drawer-field">Cor
+              <select disabled aria-describedby="filter-data-note"><option>Sem dados cadastrados</option></select>
+            </label>
+            <p class="filter-data-note" id="filter-data-note">A coleção atual não informa material, banho ou cor por peça.</p>
+            <div class="drawer-actions">
+              <button class="text-button" id="clear-filters" type="button">Limpar filtros</button>
+              <button class="button button--gold" id="apply-filters" type="button">Ver resultados</button>
+            </div>
+          </aside>
         </div>
+        <p class="favorites-status" id="favorites-status" role="status" aria-live="polite"></p>
         <div class="product-grid" id="product-grid" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <section class="section section--soft" aria-labelledby="comprar-title">
-      <div class="shell">
-        <div class="center reveal">
-          <p class="eyebrow">Um jeito simples e pessoal</p>
-          <h2 class="section-heading" id="comprar-title">Como comprar</h2>
-        </div>
-        <div class="steps">
-          <article class="step reveal"><span class="step-number">01</span><h3>Escolha sua peça</h3><p>Explore a coleção e encontre os detalhes que combinam com você.</p></article>
-          <article class="step reveal"><span class="step-number">02</span><h3>Clique em comprar</h3><p>Vamos abrir uma conversa com os detalhes do produto escolhido.</p></article>
-          <article class="step reveal"><span class="step-number">03</span><h3>Finalize pelo WhatsApp</h3><p>Tire suas dúvidas e combine os próximos passos com a gente.</p></article>
-        </div>
-        <p class="shipping-note reveal">As peças podem ser enviadas ou, se preferir, podemos combinar uma retirada. Fale conosco para saber mais.</p>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="sobre-title">
-      <div class="shell center reveal">
-        <p class="eyebrow">Um pouco sobre nós</p>
-        <h2 class="section-heading" id="sobre-title">A essência Bellavori</h2>
-        <div class="gold-line" aria-hidden="true"></div>
-        <p class="about-copy">A Bellavori acredita que a beleza mora nos detalhes e que uma peça especial pode transformar a forma como você se sente. Cada semijoia é escolhida com carinho para acompanhar sua história, celebrar sua individualidade e estar presente nos momentos que fazem a vida brilhar.</p>
       </div>
     </section>
 
@@ -125,15 +121,22 @@
 
   <footer class="site-footer">
     <div class="shell">
-      <div class="footer-top">
-        <a class="brand" href="#inicio">Bellavori</a>
-        <nav class="footer-links" aria-label="Links do rodapé">
-          <a href="https://www.instagram.com/bellavori/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a class="js-whatsapp" href="#" target="_blank" rel="noopener noreferrer">Fale pelo WhatsApp</a>
-          <a href="#colecao">Ver coleção</a>
-        </nav>
+      <div class="footer-social">
+        <p>Acompanhe a Bellavori</p>
+        <a href="https://www.instagram.com/bybellavori/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Bellavori">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6.5" r=".8"/></svg>
+        </a>
       </div>
-      <p class="footer-bottom">© <span id="current-year"></span> Bellavori. Todos os direitos reservados.</p>
+      <div class="footer-columns">
+        <div><h3>Joias</h3><a href="#colecao">Ver coleção</a></div>
+        <div><h3>Nossa empresa</h3><a href="#inicio">Bellavori</a></div>
+        <div><h3>Atendimento</h3><a class="js-whatsapp" href="#" target="_blank" rel="noopener noreferrer">Fale pelo WhatsApp</a></div>
+        <div><h3>Informações</h3><a href="#colecao">Produtos e preços</a></div>
+      </div>
+      <div class="footer-bottom">
+        <a class="brand" href="#inicio">Bellavori</a>
+        <p>© <span id="current-year"></span> Bellavori. Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
 
@@ -141,140 +144,6 @@
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4A8 8 0 1 1 20 11.7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8.5c.2-.4.4-.4.7-.4h.4c.2 0 .3.1.4.4l.7 1.7c.1.2 0 .4-.1.5l-.5.6c-.2.2-.2.3-.1.5.5.9 1.2 1.6 2.1 2.1.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.5-.1l1.6.8c.3.1.4.2.4.4 0 .3-.2 1.1-.7 1.5-.5.4-1.1.6-1.8.4-1-.2-2.3-.8-3.5-1.9-1.4-1.2-2.3-2.8-2.5-3.8-.2-.8 0-1.4.4-1.9.3-.4.7-.6.9-.6Z" fill="currentColor"/></svg>
   </a>
 
-  <script>
-    // Troque pelo número completo com DDI e DDD, somente números (ex.: 5511999999999).
-    const WHATSAPP_NUMBER = "55XXXXXXXXXXX";
-
-    // Edite nomes, descrições, preços e fotos dos produtos neste array.
-    // As imagens usam URLs do Unsplash com parâmetros para carregamento otimizado; substitua por fotos reais quando quiser.
-    const PRODUCTS = [
-      { name: "Colar Aurora", category: "Colares", description: "Corrente delicada com brilho na medida certa.", price: "R$ 129,90", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=78" },
-      { name: "Colar Serena", category: "Colares", description: "Um toque elegante para acompanhar seus dias.", price: "R$ 149,90", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=78" },
-      { name: "Colar Lume", category: "Colares", description: "Design delicado com acabamento luminoso.", price: "R$ 139,90", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=78" },
-      { name: "Colar Dourado", category: "Colares", description: "Uma peça versátil para criar combinações.", price: "R$ 119,90", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=78" },
-      { name: "Brinco Celeste", category: "Brincos", description: "Leveza e brilho para iluminar o seu olhar.", price: "R$ 89,90", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=78" },
-      { name: "Brinco Solenne", category: "Brincos", description: "Elegância delicada com presença marcante.", price: "R$ 109,90", image: "https://images.unsplash.com/photo-1635767798638-3665a6c4b6a5?auto=format&fit=crop&w=700&q=78" },
-      { name: "Brinco Alba", category: "Brincos", description: "Um clássico repensado para todos os momentos.", price: "R$ 79,90", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=78" },
-      { name: "Brinco Amélie", category: "Brincos", description: "Detalhes luminosos em uma silhueta atemporal.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1635767798638-3665a6c4b6a5?auto=format&fit=crop&w=700&q=78" },
-      { name: "Anel Serena", category: "Anéis", description: "Um detalhe sutil para expressar seu estilo.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
-      { name: "Anel Lumière", category: "Anéis", description: "Brilho delicado com personalidade própria.", price: "R$ 119,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
-      { name: "Anel Vittoria", category: "Anéis", description: "Uma peça elegante para usar do seu jeito.", price: "R$ 129,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
-      { name: "Anel Fiore", category: "Anéis", description: "Linhas delicadas inspiradas na beleza natural.", price: "R$ 89,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
-      { name: "Pulseira Duna", category: "Pulseiras", description: "Um acabamento especial para seus movimentos.", price: "R$ 119,90", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=78" },
-      { name: "Pulseira Alma", category: "Pulseiras", description: "Delicadeza que combina com as suas escolhas.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=78" },
-      { name: "Pulseira Brisa", category: "Pulseiras", description: "Leve e versátil, para acompanhar você sempre.", price: "R$ 109,90", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=78" },
-      { name: "Pulseira Estela", category: "Pulseiras", description: "Um brilho discreto para todos os dias.", price: "R$ 129,90", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=78" },
-      { name: "Piercing Serena", category: "Piercings de orelha", description: "Um detalhe delicado para compor sua curadoria.", price: "R$ 69,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
-      { name: "Piercing Lumi", category: "Piercings de orelha", description: "Brilho sutil para uma composição única.", price: "R$ 79,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
-      { name: "Piercing Alba", category: "Piercings de orelha", description: "Design minimalista com acabamento sofisticado.", price: "R$ 64,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
-      { name: "Piercing Sol", category: "Piercings de orelha", description: "Um ponto de luz para realçar seu estilo.", price: "R$ 74,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
-      { name: "Acessório Belle", category: "Acessórios", description: "Um pequeno detalhe que faz toda a diferença.", price: "R$ 89,90", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=78" },
-      { name: "Acessório Miel", category: "Acessórios", description: "Elegância versátil para combinar como quiser.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=78" },
-      { name: "Acessório Céleste", category: "Acessórios", description: "Um toque luminoso para acompanhar você.", price: "R$ 79,90", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=78" },
-      { name: "Acessório Étoile", category: "Acessórios", description: "Um detalhe atemporal com brilho delicado.", price: "R$ 109,90", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=78" }
-    ];
-
-    // Troque os textos e imagens das categorias de acordo com a coleção.
-    const CATEGORIES = [
-      { name: "Colares", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=760&q=78" },
-      { name: "Brincos", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=760&q=78" },
-      { name: "Anéis", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=760&q=78" },
-      { name: "Pulseiras", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=760&q=78" },
-      { name: "Piercings de orelha", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=760&q=78" },
-      { name: "Acessórios", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=760&q=78" }
-    ];
-
-    const productGrid = document.querySelector("#product-grid");
-    const filterList = document.querySelector("#filter-list");
-    const categoryGrid = document.querySelector("#category-grid");
-    let activeCategory = "Todos";
-
-    function whatsappLink(message) {
-      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    }
-
-    function renderCategories() {
-      categoryGrid.innerHTML = CATEGORIES.map(({ name, image }) => `
-        <a class="category-card reveal" href="#colecao" data-category-link="${name}">
-          <img src="${image}" alt="Semijoias Bellavori: categoria ${name}" loading="lazy" decoding="async" width="760" height="520">
-          <span>${name}</span>
-        </a>
-      `).join("");
-    }
-
-    function renderFilters() {
-      const names = ["Todos", ...CATEGORIES.map(({ name }) => name)];
-      filterList.innerHTML = names.map((name) => `
-        <button class="filter-button" type="button" data-filter="${name}" aria-pressed="${name === activeCategory}">${name}</button>
-      `).join("");
-    }
-
-    function renderProducts() {
-      const visibleProducts = activeCategory === "Todos"
-        ? PRODUCTS
-        : PRODUCTS.filter(({ category }) => category === activeCategory);
-
-      if (visibleProducts.length === 0) {
-        productGrid.innerHTML = '<p class="empty-products">Em breve, novas peças nesta categoria. Fale com a gente para saber mais.</p>';
-        return;
-      }
-
-      productGrid.innerHTML = visibleProducts.map((product) => `
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img class="product-image" src="${product.image}" alt="${product.name} — ${product.description}" loading="lazy" decoding="async" width="700" height="875">
-          </div>
-          <p class="product-category">${product.category}</p>
-          <h3>${product.name}</h3>
-          <p class="product-description">${product.description}</p>
-          ${product.price ? `<p class="product-price">${product.price}</p>` : ""}
-          <a class="button button--outline buy-button" href="${whatsappLink(`Olá! Vi o produto ${product.name} no site da Bellavori e gostaria de comprar.`)}" target="_blank" rel="noopener noreferrer" aria-label="Comprar ${product.name} pelo WhatsApp">Comprar</a>
-        </article>
-      `).join("");
-    }
-
-    function updateCategory(category) {
-      activeCategory = category;
-      renderFilters();
-      renderProducts();
-    }
-
-    renderCategories();
-    renderFilters();
-    renderProducts();
-    document.querySelectorAll(".js-whatsapp").forEach((link) => {
-      link.href = whatsappLink("Olá! Vim pelo site da Bellavori e gostaria de conhecer as semijoias.");
-    });
-    document.querySelector("#current-year").textContent = new Date().getFullYear();
-
-    categoryGrid.addEventListener("click", (event) => {
-      const link = event.target.closest("[data-category-link]");
-      if (!link) return;
-      updateCategory(link.dataset.categoryLink);
-    });
-    filterList.addEventListener("click", (event) => {
-      const button = event.target.closest("[data-filter]");
-      if (button) updateCategory(button.dataset.filter);
-    });
-
-    const header = document.querySelector("#site-header");
-    const updateHeader = () => header.classList.toggle("is-scrolled", window.scrollY > 12);
-    updateHeader();
-    window.addEventListener("scroll", updateHeader, { passive: true });
-
-    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
-    } else {
-      document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
-    }
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
