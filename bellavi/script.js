@@ -4,113 +4,221 @@
     // Edite nomes, descrições, preços e fotos dos produtos neste array.
     // As imagens usam URLs do Unsplash com parâmetros para carregamento otimizado; substitua por fotos reais quando quiser.
     const PRODUCTS = [
-      { name: "Colar Aurora", category: "Colares", description: "Corrente delicada com brilho na medida certa.", price: "R$ 129,90", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=78" },
-      { name: "Colar Serena", category: "Colares", description: "Um toque elegante para acompanhar seus dias.", price: "R$ 149,90", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=78" },
-      { name: "Colar Lume", category: "Colares", description: "Design delicado com acabamento luminoso.", price: "R$ 139,90", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=78" },
-      { name: "Colar Dourado", category: "Colares", description: "Uma peça versátil para criar combinações.", price: "R$ 119,90", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=78" },
-      { name: "Brinco Celeste", category: "Brincos", description: "Leveza e brilho para iluminar o seu olhar.", price: "R$ 89,90", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=78" },
-      { name: "Brinco Solenne", category: "Brincos", description: "Elegância delicada com presença marcante.", price: "R$ 109,90", image: "https://images.unsplash.com/photo-1635767798638-3665a6c4b6a5?auto=format&fit=crop&w=700&q=78" },
-      { name: "Brinco Alba", category: "Brincos", description: "Um clássico repensado para todos os momentos.", price: "R$ 79,90", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=78" },
-      { name: "Brinco Amélie", category: "Brincos", description: "Detalhes luminosos em uma silhueta atemporal.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1635767798638-3665a6c4b6a5?auto=format&fit=crop&w=700&q=78" },
-      { name: "Anel Serena", category: "Anéis", description: "Um detalhe sutil para expressar seu estilo.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
-      { name: "Anel Lumière", category: "Anéis", description: "Brilho delicado com personalidade própria.", price: "R$ 119,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
-      { name: "Anel Vittoria", category: "Anéis", description: "Uma peça elegante para usar do seu jeito.", price: "R$ 129,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
-      { name: "Anel Fiore", category: "Anéis", description: "Linhas delicadas inspiradas na beleza natural.", price: "R$ 89,90", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=78" },
-      { name: "Pulseira Duna", category: "Pulseiras", description: "Um acabamento especial para seus movimentos.", price: "R$ 119,90", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=78" },
-      { name: "Pulseira Alma", category: "Pulseiras", description: "Delicadeza que combina com as suas escolhas.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=78" },
-      { name: "Pulseira Brisa", category: "Pulseiras", description: "Leve e versátil, para acompanhar você sempre.", price: "R$ 109,90", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=78" },
-      { name: "Pulseira Estela", category: "Pulseiras", description: "Um brilho discreto para todos os dias.", price: "R$ 129,90", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=78" },
-      { name: "Piercing Serena", category: "Piercings de orelha", description: "Um detalhe delicado para compor sua curadoria.", price: "R$ 69,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
-      { name: "Piercing Lumi", category: "Piercings de orelha", description: "Brilho sutil para uma composição única.", price: "R$ 79,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
-      { name: "Piercing Alba", category: "Piercings de orelha", description: "Design minimalista com acabamento sofisticado.", price: "R$ 64,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
-      { name: "Piercing Sol", category: "Piercings de orelha", description: "Um ponto de luz para realçar seu estilo.", price: "R$ 74,90", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=78" },
-      { name: "Acessório Belle", category: "Acessórios", description: "Um pequeno detalhe que faz toda a diferença.", price: "R$ 89,90", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=78" },
-      { name: "Acessório Miel", category: "Acessórios", description: "Elegância versátil para combinar como quiser.", price: "R$ 99,90", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=78" },
-      { name: "Acessório Céleste", category: "Acessórios", description: "Um toque luminoso para acompanhar você.", price: "R$ 79,90", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=78" },
-      { name: "Acessório Étoile", category: "Acessórios", description: "Um detalhe atemporal com brilho delicado.", price: "R$ 109,90", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=78" }
-    ];
-
-    // Troque os textos e imagens das categorias de acordo com a coleção.
-    const CATEGORIES = [
-      { name: "Colares", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=760&q=78" },
-      { name: "Brincos", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=760&q=78" },
-      { name: "Anéis", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=760&q=78" },
-      { name: "Pulseiras", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=760&q=78" },
-      { name: "Piercings de orelha", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=760&q=78" },
-      { name: "Acessórios", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=760&q=78" }
+      { name: "Brinco Gota Cravejado (Pavé)", category: "Brincos", price: "R$ 129,90", image: "assets/produtos/produto-01.jpeg" },
+      { name: "Brinco Halo Floral Cravejado com Zircônias", category: "Brincos", price: "R$ 149,90", image: "assets/produtos/produto-02.jpeg" },
+      { name: "Brinco Folheado de Argola Cravejada (Huggie)", category: "Brincos", price: "R$ 139,90", image: "assets/produtos/produto-03.jpeg" },
+      { name: "Brinco Pedras Geométricas", category: "Brincos", price: "R$ 119,90", image: "assets/produtos/produto-04.jpeg" },
+      { name: "Anel Riviera Dourado", category: "Anéis", price: "R$ 89,90", image: "assets/produtos/produto-05.jpeg" },
+      { name: "Colar com Pendente Halo Oval", category: "Colares", price: "R$ 109,90", image: "assets/produtos/produto-06.jpeg" },
+      { name: "Colar Choker de Bolinhas", category: "Colares", price: "R$ 79,90", image: "assets/produtos/produto-07.jpeg" },
+      { name: "Pulseira Pedra Retangular Cristal Azul de Prata 925", category: "Pulseiras", price: "R$ 99,90", image: "assets/produtos/produto-08.jpeg" },
+      { name: "Conjunto de Colar e Brincos Roseta Dourado", category: "Conjuntos", price: "R$ 99,90", image: "assets/produtos/produto-09.jpeg" },
+      { name: "Colar com Trevo de Quatro Folhas e Ponto de Luz", category: "Colares", price: "R$ 119,90", image: "assets/produtos/produto-10.jpeg" },
+      { name: "Colar Halo Floral Dourado", category: "Colares", price: "R$ 129,90", image: "assets/produtos/produto-11.jpeg" },
+      { name: "Colar Mandala Cravejada (Pavé)", category: "Colares", price: "R$ 89,90", image: "assets/produtos/produto-12.jpeg" },
+      { name: "Anel Solitário com Três Pedras (Trio / Baguete Central)", category: "Anéis", price: "R$ 119,90", image: "assets/produtos/produto-13.jpeg" },
+      { name: "Aliança com Estrelas Cravejadas de Zircônias", category: "Anéis", price: "R$ 99,90", image: "assets/produtos/produto-14.jpeg" },
+      { name: "Aliança Fina Cravejada (Aparador)", category: "Anéis", price: "R$ 109,90", image: "assets/produtos/produto-15.jpeg" },
+      { name: "Anel com Pingente Redondo Roseta de Baguetes Cravejado", category: "Anéis", price: "R$ 129,90", image: "assets/produtos/produto-16.jpeg" },
+      { name: "Aliança Fina Cravejada (Aparador)", category: "Anéis", price: "R$ 69,90", image: "assets/produtos/produto-17.jpeg" },
+      { name: "Aliança Fina Riviera Prata", category: "Anéis", price: "R$ 79,90", image: "assets/produtos/produto-18.jpeg" },
+      { name: "Anel Riviera Zircônias Brancas", category: "Anéis", price: "R$ 64,90", image: "assets/produtos/produto-19.jpeg" },
+      { name: "Colar de Malha Torcida", category: "Colares", price: "R$ 74,90", image: "assets/produtos/produto-20.jpeg" },
+      { name: "Pulseira Ponto de Luz", category: "Pulseiras", price: "R$ 89,90", image: "assets/produtos/produto-21.jpeg" },
+      { name: "Colar de Proteção (Mão de Fátima e Olho Grego)", category: "Colares", price: "R$ 99,90", image: "assets/produtos/produto-22.jpeg" },
+      { name: "Colar com Pingente Redondo Roseta de Baguetes Cravejado", category: "Colares", price: "R$ 79,90", image: "assets/produtos/produto-23.jpeg" },
+      { name: "Piercing de Orelha Três Voltas com Zircônias Banhado a Ródio", category: "Piercings de orelha", price: "R$ 109,90", image: "assets/produtos/produto-24.jpeg" }
     ];
 
     const productGrid = document.querySelector("#product-grid");
     const filterList = document.querySelector("#filter-list");
-    const categoryGrid = document.querySelector("#category-grid");
+    const resultCount = document.querySelector("#result-count");
+    const minPriceInput = document.querySelector("#min-price");
+    const maxPriceInput = document.querySelector("#max-price");
+    const searchInput = document.querySelector("#product-search");
+    const sortSelect = document.querySelector("#sort-products");
+    const favoriteToggle = document.querySelector("#favorite-toggle");
+    const favoritesStatus = document.querySelector("#favorites-status");
+    const favoriteStorageKey = "bellavori-favorites";
+    let favoriteProducts = new Set();
     let activeCategory = "Todos";
+    let searchTerm = "";
+    let showingFavorites = false;
 
     function whatsappLink(message) {
       return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     }
 
-    function renderCategories() {
-      categoryGrid.innerHTML = CATEGORIES.map(({ name, image }) => `
-        <a class="category-card reveal" href="#colecao" data-category-link="${name}">
-          <img src="${image}" alt="Semijoias Bellavori: categoria ${name}" loading="lazy" decoding="async" width="760" height="520">
-          <span>${name}</span>
-        </a>
-      `).join("");
+    function loadFavorites() {
+      try {
+        const savedFavorites = localStorage.getItem(favoriteStorageKey);
+        if (!savedFavorites) return;
+
+        const parsedFavorites = JSON.parse(savedFavorites);
+        if (!Array.isArray(parsedFavorites)) {
+          throw new Error("A lista salva de favoritos não é válida.");
+        }
+        const validProductImages = new Set(PRODUCTS.map(({ image }) => image));
+        favoriteProducts = new Set(parsedFavorites.filter((image) =>
+          typeof image === "string" && validProductImages.has(image)
+        ));
+      } catch (error) {
+        console.error("Não foi possível carregar os favoritos salvos.", error);
+        favoritesStatus.textContent = "Não foi possível carregar os favoritos salvos neste navegador.";
+      }
+    }
+
+    function saveFavorites() {
+      try {
+        localStorage.setItem(favoriteStorageKey, JSON.stringify([...favoriteProducts]));
+        favoritesStatus.textContent = "";
+      } catch (error) {
+        console.error("Não foi possível salvar os favoritos.", error);
+        favoritesStatus.textContent = "Não foi possível salvar os favoritos neste navegador.";
+      }
     }
 
     function renderFilters() {
-      const names = ["Todos", ...CATEGORIES.map(({ name }) => name)];
+      const categories = [...new Set(PRODUCTS.map(({ category }) => category))];
+      const names = ["Todos", ...categories];
       filterList.innerHTML = names.map((name) => `
         <button class="filter-button" type="button" data-filter="${name}" aria-pressed="${name === activeCategory}">${name}</button>
       `).join("");
     }
 
     function renderProducts() {
-      const visibleProducts = activeCategory === "Todos"
-        ? PRODUCTS
-        : PRODUCTS.filter(({ category }) => category === activeCategory);
+      let visibleProducts = showingFavorites
+        ? PRODUCTS.filter(({ image }) => favoriteProducts.has(image))
+        : activeCategory === "Todos"
+          ? PRODUCTS
+          : PRODUCTS.filter(({ category }) => category === activeCategory);
+      const minPrice = minPriceInput.value ? Number(minPriceInput.value) : 0;
+      const maxPrice = maxPriceInput.value ? Number(maxPriceInput.value) : Infinity;
+
+      visibleProducts = visibleProducts.filter((product) => {
+        const price = Number(product.price.replace(/[^\d,]/g, "").replace(",", "."));
+        const matchesSearch = `${product.name} ${product.category}`
+          .toLocaleLowerCase("pt-BR")
+          .includes(searchTerm);
+        return price >= minPrice && price <= maxPrice && matchesSearch;
+      });
+
+      if (sortSelect.value === "price-asc") {
+        visibleProducts.sort((first, second) => getPrice(first) - getPrice(second));
+      } else if (sortSelect.value === "price-desc") {
+        visibleProducts.sort((first, second) => getPrice(second) - getPrice(first));
+      }
+
+      resultCount.textContent = `${visibleProducts.length} ${visibleProducts.length === 1 ? "resultado" : "resultados"}`;
 
       if (visibleProducts.length === 0) {
-        productGrid.innerHTML = '<p class="empty-products">Em breve, novas peças nesta categoria. Fale com a gente para saber mais.</p>';
+        productGrid.innerHTML = showingFavorites && favoriteProducts.size === 0
+          ? '<p class="empty-products">Você ainda não salvou nenhuma peça. Clique no coração de uma joia para adicioná-la aos favoritos.</p>'
+          : '<p class="empty-products">Nenhuma peça encontrada com estes filtros. Ajuste a busca ou fale com a gente pelo WhatsApp.</p>';
         return;
       }
 
       productGrid.innerHTML = visibleProducts.map((product) => `
         <article class="product-card">
           <div class="product-image-wrap">
-            <img class="product-image" src="${product.image}" alt="${product.name} — ${product.description}" loading="lazy" decoding="async" width="700" height="875">
+            <img class="product-image" src="${product.image}" alt="${product.name}" loading="lazy" decoding="async" width="700" height="700">
+            <button class="product-favorite${favoriteProducts.has(product.image) ? " is-favorite" : ""}" type="button" data-favorite="${product.image}" aria-pressed="${favoriteProducts.has(product.image)}" aria-label="${favoriteProducts.has(product.image) ? "Remover" : "Salvar"} ${product.name} ${favoriteProducts.has(product.image) ? "dos" : "nos"} favoritos">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11a4.8 4.8 0 0 1 8.8-2.6 4.8 4.8 0 0 1 8.8 2.6Z"/></svg>
+            </button>
           </div>
           <p class="product-category">${product.category}</p>
           <h3>${product.name}</h3>
-          <p class="product-description">${product.description}</p>
           ${product.price ? `<p class="product-price">${product.price}</p>` : ""}
           <a class="button button--outline buy-button" href="${whatsappLink(`Olá! Vi o produto ${product.name} no site da Bellavori e gostaria de comprar.`)}" target="_blank" rel="noopener noreferrer" aria-label="Comprar ${product.name} pelo WhatsApp">Comprar</a>
         </article>
       `).join("");
     }
 
+    function getPrice(product) {
+      return Number(product.price.replace(/[^\d,]/g, "").replace(",", "."));
+    }
+
     function updateCategory(category) {
-      activeCategory = category;
+      const categories = new Set(PRODUCTS.map(({ category: productCategory }) => productCategory));
+      activeCategory = category === "Todos" || categories.has(category)
+        ? category
+        : "Todos";
       renderFilters();
       renderProducts();
     }
 
-    renderCategories();
+    loadFavorites();
     renderFilters();
     renderProducts();
     document.querySelectorAll(".js-whatsapp").forEach((link) => {
       link.href = whatsappLink("Olá! Vim pelo site da Bellavori e gostaria de conhecer as semijoias.");
     });
     document.querySelector("#current-year").textContent = new Date().getFullYear();
-
-    categoryGrid.addEventListener("click", (event) => {
-      const link = event.target.closest("[data-category-link]");
-      if (!link) return;
-      updateCategory(link.dataset.categoryLink);
+    document.querySelector("#search-form").addEventListener("submit", (event) => event.preventDefault());
+    searchInput.addEventListener("input", () => {
+      searchTerm = searchInput.value.trim().toLocaleLowerCase("pt-BR");
+      renderProducts();
     });
+    sortSelect.addEventListener("change", renderProducts);
+    [minPriceInput, maxPriceInput].forEach((input) => input.addEventListener("change", renderProducts));
+
+    favoriteToggle.addEventListener("click", () => {
+      showingFavorites = !showingFavorites;
+      favoriteToggle.setAttribute("aria-pressed", String(showingFavorites));
+      favoriteToggle.setAttribute("aria-label", showingFavorites ? "Ver coleção completa" : "Ver favoritos");
+      if (showingFavorites) activeCategory = "Todos";
+      renderFilters();
+      renderProducts();
+      document.querySelector("#colecao").scrollIntoView({ behavior: "smooth" });
+    });
+    productGrid.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-favorite]");
+      if (!button) return;
+
+      const productImage = button.dataset.favorite;
+      if (favoriteProducts.has(productImage)) {
+        favoriteProducts.delete(productImage);
+      } else {
+        favoriteProducts.add(productImage);
+      }
+      saveFavorites();
+      renderProducts();
+    });
+
     filterList.addEventListener("click", (event) => {
       const button = event.target.closest("[data-filter]");
       if (button) updateCategory(button.dataset.filter);
+    });
+    const filterDrawer = document.querySelector("#filter-drawer");
+    const filterBackdrop = document.querySelector("#filter-backdrop");
+    const filterToggle = document.querySelector("#open-filters");
+    const closeFilterButton = document.querySelector("#close-filters");
+    const setFilterDrawerOpen = (isOpen) => {
+      filterDrawer.classList.toggle("is-open", isOpen);
+      filterDrawer.setAttribute("aria-hidden", String(!isOpen));
+      filterBackdrop.hidden = !isOpen;
+      filterToggle.setAttribute("aria-expanded", String(isOpen));
+      document.body.classList.toggle("drawer-open", isOpen);
+      if (isOpen) closeFilterButton.focus();
+      else filterToggle.focus();
+    };
+    filterToggle.addEventListener("click", () => setFilterDrawerOpen(true));
+    closeFilterButton.addEventListener("click", () => setFilterDrawerOpen(false));
+    filterBackdrop.addEventListener("click", () => setFilterDrawerOpen(false));
+    document.querySelector("#apply-filters").addEventListener("click", () => setFilterDrawerOpen(false));
+    document.querySelector("#clear-filters").addEventListener("click", () => {
+      minPriceInput.value = "";
+      maxPriceInput.value = "";
+      searchInput.value = "";
+      searchTerm = "";
+      sortSelect.value = "launch";
+      updateCategory("Todos");
+      setFilterDrawerOpen(false);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && filterDrawer.classList.contains("is-open")) {
+        setFilterDrawerOpen(false);
+      }
     });
 
     const header = document.querySelector("#site-header");
