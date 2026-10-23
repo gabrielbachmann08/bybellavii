@@ -75,35 +75,35 @@
               </select>
             </label>
           </div>
-          <div class="filter-backdrop" id="filter-backdrop" hidden></div>
-          <aside class="filter-drawer" id="filter-drawer" aria-hidden="true" aria-labelledby="filter-title">
-            <div class="drawer-heading">
-              <h3 id="filter-title">Filtros</h3>
-              <button class="icon-button" id="close-filters" type="button" aria-label="Fechar filtros">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
-              </button>
-            </div>
-            <h4>Categoria</h4>
-            <div class="filter-list" id="filter-list" role="group" aria-label="Filtrar produtos por categoria"></div>
-            <label class="drawer-field">Faixa de preço
-              <span class="price-range">
-                <span><span>De R$</span><input id="min-price" type="number" min="0" placeholder="0" inputmode="decimal" aria-label="Preço mínimo"></span>
-                <span><span>Até R$</span><input id="max-price" type="number" min="0" placeholder="Sem limite" inputmode="decimal" aria-label="Preço máximo"></span>
-              </span>
-            </label>
-            <label class="drawer-field">Material / banho
-              <select disabled aria-describedby="filter-data-note"><option>Sem dados cadastrados</option></select>
-            </label>
-            <label class="drawer-field">Cor
-              <select disabled aria-describedby="filter-data-note"><option>Sem dados cadastrados</option></select>
-            </label>
-            <p class="filter-data-note" id="filter-data-note">A coleção atual não informa material, banho ou cor por peça.</p>
-            <div class="drawer-actions">
-              <button class="text-button" id="clear-filters" type="button">Limpar filtros</button>
-              <button class="button button--gold" id="apply-filters" type="button">Ver resultados</button>
-            </div>
-          </aside>
         </div>
+        <div class="filter-backdrop" id="filter-backdrop" hidden></div>
+        <aside class="filter-drawer" id="filter-drawer" aria-hidden="true" aria-labelledby="filter-title">
+          <div class="drawer-heading">
+            <h3 id="filter-title">Filtros</h3>
+            <button class="icon-button" id="close-filters" type="button" aria-label="Fechar filtros">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <h4>Categoria</h4>
+          <div class="filter-list" id="filter-list" role="group" aria-label="Filtrar produtos por categoria"></div>
+          <label class="drawer-field">Faixa de preço
+            <span class="price-range">
+              <span><span>De R$</span><input id="min-price" type="number" min="0" placeholder="0" inputmode="decimal" aria-label="Preço mínimo"></span>
+              <span><span>Até R$</span><input id="max-price" type="number" min="0" placeholder="Sem limite" inputmode="decimal" aria-label="Preço máximo"></span>
+            </span>
+          </label>
+          <label class="drawer-field">Material / banho
+            <select disabled aria-describedby="filter-data-note"><option>Sem dados cadastrados</option></select>
+          </label>
+          <label class="drawer-field">Cor
+            <select disabled aria-describedby="filter-data-note"><option>Sem dados cadastrados</option></select>
+          </label>
+          <p class="filter-data-note" id="filter-data-note">A coleção atual não informa material, banho ou cor por peça.</p>
+          <div class="drawer-actions">
+            <button class="text-button" id="clear-filters" type="button">Limpar filtros</button>
+            <button class="button button--gold" id="apply-filters" type="button">Ver resultados</button>
+          </div>
+        </aside>
         <p class="favorites-status" id="favorites-status" role="status" aria-live="polite"></p>
         <div class="product-grid" id="product-grid" aria-live="polite"></div>
       </div>
